@@ -3,10 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Update"
+        xmlns:local="clr-namespace:Update" Loaded="Window_Loaded"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label>
+                Current version
+            </Label>
 
+            <TextBox x:Name="CurrentVersionTextBox"
+                IsReadOnly="True">
+
+            </TextBox>
+
+            <Button x:Name="UpdateButton" Click="UpdateButton_Click"
+                Margin="0,15,0,0" IsEnabled="False">
+                Update
+            </Button>
+
+            <Button Click="Button_Click">
+                Check
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
